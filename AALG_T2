@@ -1,1 +1,25 @@
+import random
+
+def buscar_max_min_multiplos3_rec(arreglo, indice):
+
+    if indice == len(arreglo):
+        return None, None
+    
+
+    max_resto, min_resto = buscar_max_min_multiplos3_rec(arreglo, indice + 1)
+    
+    elem_actual = arreglo[indice]
+    
+    if elem_actual % 3 == 0:
+        if max_resto is None:
+            return elem_actual, elem_actual
+        else:
+            # Comparamos el actual con los resultados del resto del arreglo
+            nuevo_max = elem_actual if elem_actual > max_resto else max_resto
+            nuevo_min = elem_actual if elem_actual < min_resto else min_resto
+            return nuevo_max, nuevo_min
+    else:
+
+        return max_resto, min_resto
+
 
