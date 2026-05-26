@@ -42,13 +42,7 @@ if __name__ == "__main__":
     print("\nArreglo generado aleatoriamente:")
     print(arreglo_usuario)
     
-
-    ejemplo_enunciado = [5, 6, 10, 9, 12, 14]
-    print("\n--- Validación con el ejemplo del enunciado ---")
-    print(f"Arreglo de prueba: {ejemplo_enunciado}")
-    print(f"Resultado esperado: 9.0 -> Resultado obtenido: {calcular_promedio_max_min(ejemplo_enunciado)}")
     
-
     print("\n--- Resultado del Arreglo Usuario ---")
     resultado = calcular_promedio_max_min(arreglo_usuario)
     print(f"El promedio entre el máximo y mínimo múltiplo de 3 es: {resultado}")
